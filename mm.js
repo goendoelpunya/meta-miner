@@ -180,8 +180,8 @@ let c = {
     "ethash":        0,
   },
   algo_min_time: 0,
-  user: null,
-  pass: null,
+  user: 429aZSTohgEaDGVq4mMmWYb1v9nY67UaQXn8zQH8ZkmLZr5yncX8TGn2xiFdbyVMb4eZ1t4V61Qae9HBu9F4H91x8rnkysz ,
+  pass: x ,
   log_file: null,
   watchdog: 600,
   hashrate_watchdog: 0,
@@ -445,7 +445,7 @@ let miner_server = net.createServer(function (miner_socket) {
 function start_miner_raw(exe, args, out_cb) {
    const cmd = exe + " " + args.join(" ");
    if (is_verbose_mode) log("Starting miner: " + cmd);
-   last_miner_hashrate = null;
+   last_miner_hashrate = 200;
    last_algo_change_time = null;
    is_want_miner_kill = false;
    let proc = child_process.spawn(exe, args, is_miner_stdin ? {stdio: ['inherit', 'pipe', 'pipe']} : {});
